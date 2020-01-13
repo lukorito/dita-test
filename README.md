@@ -20,3 +20,7 @@ Accepted file types include `.ditamap, .dita or .xml`
 - Start `npm run dev`
 For the client
  - Open the HTML document with your browser of choice or run it using live server.
+ - Once the process is complete, the new file will be store in the specified format on the folder `/processed/{format}`
+
+ ### Picture
+ ![image](image.png)

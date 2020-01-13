@@ -28,8 +28,8 @@ app.post("/upload", (req, res, next) => {
         if (err) {
           console.log(err, "error");
         }
-        console.log("====ends====");
         res.send("upload success");
+        console.log("====ends====");
       }
     );
   });

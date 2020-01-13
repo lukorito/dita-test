@@ -20,15 +20,17 @@ async function handleSubmit(event) {
   if (file) {
     let data = new FormData();
     data.append("file", file);
-    console.log(publishType.value, docType.value);
     data.append("publishType", publishType.value);
     data.append("docType", docType.value);
-    fetch("http://localhost:5000/upload", {
-      method: "POST",
-      body: data
-    }).then(data => {
+    try {
+      await fetch("http://localhost:5000/upload", {
+        method: "POST",
+        body: data
+      });
       window.alert("Upload successful");
-    });
+    } catch (error) {
+      console.log(error);
+    }
   }
 }
 
