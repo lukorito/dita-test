@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Dita Test</title>
+  </head>
+  <body>
+    <div class="header m-3">
+      <div class="logo">
+        <h2>TCE Logo Here</h2>
+      </div>
+    </div>
+    <div class="display-error"></div>
+    <form id="upload-form" class="main mt-5">
+      <div class="file-upload">
+        <h3>File upload</h3>
+        <input
+          type="file"
+          name="ditaFile"
+          id="file-upload"
+          accept=".pdf, .dita, .ditamap"
+        />
+      </div>
+      <div class="d-flex mt-5">
+        <div class="publish-type-container">
+          <h1>Publish Type</h1>
+          <div class="form-check">
+            <input
+              class="publish-type"
+              type="radio"
+              name="publish-type"
+              value="html"
+            />
+            <label class="publish-type-label" for="html5">
+              HTML5
+            </label>
+          </div>
+          <div class="form-check">
+            <input
+              class="publish-type"
+              type="radio"
+              name="publish-type"
+              value="pdf"
+            />
+            <label class="publish-type-label" for="pdf">
+              PDF
+            </label>
+          </div>
+          <div class="form-check">
+            <input
+              class="publish-type"
+              type="radio"
+              name="publish-type"
+              value="epub"
+            />
+            <label class="publish-type-label" for="exampleRadios2">
+              EPUB
+            </label>
+          </div>
+          <div class="form-check">
+            <input
+              class="publish-type"
+              type="radio"
+              name="publish-type"
+              value="docx"
+            />
+            <label class="publish-type-label" for="exampleRadios2">
+              DOCX
+            </label>
+          </div>
+        </div>
+        <div class="doc-type-container ml-4">
+          <h1>Doc Type</h1>
+          <div class="form-check">
+            <input class="doc-type" type="radio" name="doc-type" value="far" />
+            <label class="doc-type-label" for="far">
+              FAR
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="doc-type" type="radio" name="doc-type" value="gsam" />
+            <label class="doc-type-label" for="gsam">
+              GSAM
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="doc-type" type="radio" name="doc-type" value="ftr" />
+            <label class="doc-type-label" for="ftr">
+              FTR
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="doc-type" type="radio" name="doc-type" value="fmr" />
+            <label class="doc-type-label" for="fmr">
+              FMR
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="doc-type" type="radio" name="doc-type" value="ecfr" />
+            <label class="doc-type-label" for="ecfr">
+              ECFR
+            </label>
+          </div>
+          <div class="form-check">
+            <input
+              class="doc-type"
+              type="radio"
+              name="doc-type"
+              value="compare"
+            />
+            <label class="doc-type-label" for="compare">
+              COMPARE
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="submit-button ml-5 mt-5">
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+  </body>
+  <script src="main.js"></script>
+</html>
