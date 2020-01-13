@@ -15,11 +15,13 @@ app.get("/", (req, res) => {
 const port = process.env.PORT || 5000;
 
 app.post("/upload", (req, res, next) => {
+  // parse form data with formidable
   const form = new formidable.IncomingForm();
   form.parse(req, async (err, fields, files) => {
     const { docType, publishType } = fields;
     console.log("====begins====");
     const { file } = files;
+    // call dita function
     exec(
       `dita -i ${file.path} --clean.temp="no" -f ${publishType} --args.output.base=${file.name} -o ./processed/${publishType}`,
       function(err, stdout, stderr) {
